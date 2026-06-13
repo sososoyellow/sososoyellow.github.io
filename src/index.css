@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── 本地中文字体 ── */
+@font-face {
+  font-family: 'XiangQiao';
+  src: url('/fonts/xiangqiaolaiwanlingganti.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* 仅对 CJK 统一汉字区间生效，英文保持 BlueCustard */
+  unicode-range:
+    U+3000-9FFF,
+    U+F900-FAFF,
+    U+FE30-FE4F,
+    U+FF00-FFEF;
+}
+
+/* ── 本地英文字体 ── */
+@font-face {
+  font-family: 'BlueCustard';
+  src: url('/fonts/bluecustard-wpywe.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* 仅对拉丁字符生效 */
+  unicode-range:
+    U+0000-00FF,
+    U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@layer base {
+  body {
+    background-color: #FDFAF4;
+    color: #4A4A4A;
+    font-family: 'XiangQiao', 'BlueCustard', 'Work Sans', 'PingFang SC', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'XiangQiao', 'BlueCustard', 'Plus Jakarta Sans', sans-serif;
+    color: #2F1B0C;
+  }
+}
+
+@layer components {
+  .glass-nav {
+    backdrop-filter: blur(8px);
+    background-color: rgba(253, 250, 244, 0.85);
+  }
+
+  .skill-pill {
+    background-color: #F8F0E0;
+    border: 1px solid rgba(194, 164, 106, 0.4);
+    transition: all 0.3s ease;
+  }
+  .skill-pill:hover {
+    background-color: #f2e1b9;
+    transform: translateY(-1px);
+  }
+
+  .growth-card {
+    border-left: 3px solid #8B5A2B;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .growth-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(139, 90, 43, 0.08);
+  }
+
+  /* About page cards */
+  .about-card {
+    @apply bg-surface border border-border-subtle rounded-xl flex flex-col gap-6 p-8;
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .about-card:hover {
+    box-shadow: 0 4px 20px -2px rgba(194, 164, 106, 0.2);
+  }
+  .about-card-featured {
+    @apply bg-primary-container border-2 border-on-tertiary-container rounded-xl flex flex-col gap-6 p-8 relative overflow-hidden;
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .about-card-featured:hover {
+    box-shadow: 0 8px 32px rgba(139, 90, 43, 0.12);
+  }
+
+  .keyword-item {
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: default;
+    user-select: none;
+  }
+  .keyword-item:hover {
+    opacity: 1 !important;
+    transform: scale(1.08) rotate(0deg) !important;
+    color: #8b5a2b !important;
+  }
+
+  .watermark-estj {
+    color: rgba(47, 27, 12, 0.05);
+    pointer-events: none;
+    user-select: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(120px, 22vw, 260px);
+    line-height: 1;
+  }
+}
+
+@layer utilities {
+  .page-fade {
+    animation: pageFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  @keyframes pageFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}

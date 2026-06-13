@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edith | 首页</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#594313",
+                    "inverse-on-surface": "#f5f0eb",
+                    "outline-variant": "#cdc6b8",
+                    "tertiary": "#835425",
+                    "background": "#FDFAF4",
+                    "error": "#ba1a1a",
+                    "primary-container": "#f4e3bb",
+                    "on-primary-container": "#716545",
+                    "surface-tint": "#695d3e",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#d5c59f",
+                    "on-error-container": "#93000a",
+                    "text-primary": "#2F1B0C",
+                    "on-surface-variant": "#4b463c",
+                    "surface-container-high": "#ede7e2",
+                    "surface-container-highest": "#e7e2dd",
+                    "primary": "#695d3e",
+                    "on-background": "#1d1b19",
+                    "primary-fixed-dim": "#d5c59f",
+                    "on-primary": "#ffffff",
+                    "border-subtle": "rgba(194, 164, 106, 0.25)",
+                    "on-secondary-container": "#785f2c",
+                    "secondary-container": "#fddb9c",
+                    "secondary": "#735b28",
+                    "text-body": "#4A4A4A",
+                    "on-surface": "#1d1b19",
+                    "outline": "#7c766b",
+                    "surface-bright": "#fef8f3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#504628",
+                    "surface": "#F8F0E0",
+                    "tertiary-fixed-dim": "#f9ba82",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#ded9d4",
+                    "surface-variant": "#e7e2dd",
+                    "primary-fixed": "#f2e1b9",
+                    "surface-container": "#f2ede8",
+                    "secondary-fixed": "#ffdea2",
+                    "on-primary-fixed": "#231b03",
+                    "secondary-fixed-dim": "#e2c286",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-low": "#f8f3ee",
+                    "on-tertiary-fixed": "#2e1500",
+                    "on-tertiary-container": "#8b5a2b",
+                    "inverse-surface": "#32302d",
+                    "on-tertiary-fixed-variant": "#683d0f",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdcc1",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#ffdec4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "unit": "4px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Work Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Work Sans"],
+                    "body-md": ["Work Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Work Sans"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FDFAF4;
+            color: #2F1B0C;
+            overflow-x: hidden;
+        }
+        .watermark-estj {
+            color: rgba(47, 27, 12, 0.05);
+            pointer-events: none;
+            user-select: none;
+        }
+        .keyword-item {
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .keyword-item:hover {
+            opacity: 1 !important;
+            transform: scale(1.1) rotate(0deg) !important;
+            color: #8b5a2b;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-background dark:bg-on-background">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<div class="font-headline-md text-headline-md text-on-tertiary-container dark:text-tertiary-fixed-dim font-extrabold cursor-pointer transition-opacity active:opacity-70">
+                Edith
+            </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-tertiary-container dark:text-tertiary-fixed font-bold border-b-2 border-on-tertiary-container font-label-md text-label-md transition-colors duration-300" href="#">首页</a>
+<a class="text-text-body dark:text-outline-variant font-label-md text-label-md hover:text-on-tertiary-fixed-variant transition-colors duration-300" href="#">关于我</a>
+<a class="text-text-body dark:text-outline-variant font-label-md text-label-md hover:text-on-tertiary-fixed-variant transition-colors duration-300" href="#">职业特性</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-90 transition-all cursor-pointer">
+                联系我
+            </button>
+</div>
+</header>
+<main class="flex-grow relative flex flex-col md:flex-row items-stretch overflow-hidden">
+<!-- Large Portrait (Left Side) -->
+<div class="w-full md:w-1/2 h-[614px] md:h-auto relative overflow-hidden">
+<img alt="Portrait of Edith" class="absolute inset-0 w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A high-end editorial portrait of a professional woman with a confident expression, captured in soft, natural window lighting. The style is minimalist and clean, using a warm Morandi color palette with muted caramel and cream tones. The background is a blurred office interior with sophisticated wooden textures, evoking a sense of refined calm and professional stillness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCptiajLSPuJVkn_LeSDdytW26FY4sQsDHnCueJA-bBYaGX_igNNsEDBEhaT62RDlnOzpWpPpnDMM5hqe8fyzyqMlccSAwtHen5DXTMZWvrWpMNe9DoA834cC9op90qFJ4lUtmYXaZ3m6BGA1aDMNel289s9ZXWEdz3nxAvcWyb9C7m-OswbaRlwLoQlqnjVY9INMzR9PX-2hn_DCOdclLNFnpUNl1rfkb8-slxZIleAcel2gyj3G6nmEJnHMdgYxjwoU8Pxjmfyno"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-background/20"></div>
+</div>
+<!-- Organic Content Section (Right/Center Side) -->
+<div class="w-full md:w-1/2 relative flex items-center justify-center p-margin-mobile md:p-margin-desktop bg-background">
+<!-- ESTJ Watermark -->
+<div class="absolute inset-0 flex items-center justify-center z-0 overflow-hidden">
+<span class="watermark-estj font-display-lg text-[20vw] md:text-[25vw] leading-none font-extrabold select-none">
+                    ESTJ
+                </span>
+</div>
+<!-- Scattered Keywords -->
+<div class="relative z-10 w-full h-full flex flex-wrap content-center justify-center gap-8 md:gap-12">
+<div class="keyword-item text-display-lg font-display-lg opacity-80 rotate-[-5deg] cursor-default" style="color: #695d3e;">
+                    猫奴
+                </div>
+<div class="keyword-item text-headline-lg font-headline-lg opacity-60 rotate-[12deg] cursor-default" style="color: #8b5a2b;">
+                    大湾区居民
+                </div>
+<div class="keyword-item text-headline-md font-headline-md opacity-70 rotate-[-8deg] cursor-default" style="color: #735b28;">
+                    zumba 狂热份子
+                </div>
+<div class="keyword-item text-display-lg font-display-lg opacity-90 rotate-[3deg] cursor-default" style="color: #2F1B0C;">
+                    寻求下一段职业突破
+                </div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-12 left-12 w-24 h-[1px] bg-border-subtle"></div>
+<div class="absolute bottom-12 right-12 text-on-tertiary-fixed-variant opacity-30 text-label-sm font-label-sm uppercase tracking-widest">
+                Curiosity & Structure
+            </div>
+</div>
+</main>
+<!-- Footer / Contact Strip -->
+<footer class="w-full border-t border-border-subtle bg-surface-container-low dark:bg-inverse-surface">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8">
+<div class="font-label-sm text-label-sm text-on-surface dark:text-surface-bright mb-4 md:mb-0">
+                © 2024 Edith. All rights reserved.
+            </div>
+<div class="flex gap-gutter items-center">
+<a class="font-label-sm text-label-sm text-text-body dark:text-outline-variant hover:text-on-tertiary-container dark:hover:text-tertiary-fixed-dim transition-colors flex items-center gap-1" href="mailto:contact@edith.com">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+                    Email
+                </a>
+<a class="font-label-sm text-label-sm text-text-body dark:text-outline-variant hover:text-on-tertiary-container dark:hover:text-tertiary-fixed-dim transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">share</span>
+                    LinkedIn
+                </a>
+<a class="font-label-sm text-label-sm text-text-body dark:text-outline-variant hover:text-on-tertiary-container dark:hover:text-tertiary-fixed-dim transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">camera_alt</span>
+                    Instagram
+                </a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for keyword floating effect
+        document.addEventListener('mousemove', (e) => {
+            const items = document.querySelectorAll('.keyword-item');
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+
+            items.forEach((item, index) => {
+                const depth = (index + 1) * 0.2;
+                item.style.transform = `translate(${x * depth}px, ${y * depth}px) rotate(${item.getAttribute('data-initial-rotate') || '0'}deg)`;
+            });
+        });
+
+        // Store initial rotation for consistent movement
+        document.querySelectorAll('.keyword-item').forEach(item => {
+            const transform = window.getComputedStyle(item).getPropertyValue('transform');
+            if (transform !== 'none') {
+                const values = transform.split('(')[1].split(')')[0].split(',');
+                const a = values[0];
+                const b = values[1];
+                const angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+                item.setAttribute('data-initial-rotate', angle);
+            }
+        });
+    </script>
+</body></html>

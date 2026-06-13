@@ -1,0 +1,51 @@
+/* TargetCursor — custom crosshair cursor overlay */
+
+/* Wrapper: pinned to (0,0), GSAP moves it via transform */
+.target-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+}
+
+/* Center dot */
+.target-cursor-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #8b5a2b;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s ease;
+}
+
+/* All four corner brackets share base styles */
+.target-cursor-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+}
+
+/* ── L-shaped borders ── */
+.corner-tl {
+  border-top:  3px solid #8b5a2b;
+  border-left: 3px solid #8b5a2b;
+}
+
+.corner-tr {
+  border-top:   3px solid #8b5a2b;
+  border-right: 3px solid #8b5a2b;
+}
+
+.corner-br {
+  border-bottom: 3px solid #8b5a2b;
+  border-right:  3px solid #8b5a2b;
+}
+
+.corner-bl {
+  border-bottom: 3px solid #8b5a2b;
+  border-left:   3px solid #8b5a2b;
+}

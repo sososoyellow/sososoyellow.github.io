@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edith - 关于我</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#594313",
+                    "inverse-on-surface": "#f5f0eb",
+                    "outline-variant": "#cdc6b8",
+                    "tertiary": "#835425",
+                    "background": "#FDFAF4",
+                    "error": "#ba1a1a",
+                    "primary-container": "#f4e3bb",
+                    "on-primary-container": "#716545",
+                    "surface-tint": "#695d3e",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#d5c59f",
+                    "on-error-container": "#93000a",
+                    "text-primary": "#2F1B0C",
+                    "on-surface-variant": "#4b463c",
+                    "surface-container-high": "#ede7e2",
+                    "surface-container-highest": "#e7e2dd",
+                    "primary": "#695d3e",
+                    "on-background": "#1d1b19",
+                    "primary-fixed-dim": "#d5c59f",
+                    "on-primary": "#ffffff",
+                    "border-subtle": "rgba(194, 164, 106, 0.25)",
+                    "on-secondary-container": "#785f2c",
+                    "secondary-container": "#fddb9c",
+                    "secondary": "#735b28",
+                    "text-body": "#4A4A4A",
+                    "on-surface": "#1d1b19",
+                    "outline": "#7c766b",
+                    "surface-bright": "#fef8f3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#504628",
+                    "surface": "#F8F0E0",
+                    "tertiary-fixed-dim": "#f9ba82",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#ded9d4",
+                    "surface-variant": "#e7e2dd",
+                    "primary-fixed": "#f2e1b9",
+                    "surface-container": "#f2ede8",
+                    "secondary-fixed": "#ffdea2",
+                    "on-primary-fixed": "#231b03",
+                    "secondary-fixed-dim": "#e2c286",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-low": "#f8f3ee",
+                    "on-tertiary-fixed": "#2e1500",
+                    "on-tertiary-container": "#8b5a2b",
+                    "inverse-surface": "#32302d",
+                    "on-tertiary-fixed-variant": "#683d0f",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdcc1",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#ffdec4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "unit": "4px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Work Sans", "sans-serif"],
+                    "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+                    "body-lg": ["Work Sans", "sans-serif"],
+                    "body-md": ["Work Sans", "sans-serif"],
+                    "display-lg": ["Plus Jakarta Sans", "sans-serif"],
+                    "label-md": ["Work Sans", "sans-serif"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FDFAF4;
+            color: #4A4A4A;
+            font-family: "Work Sans", "PingFang SC", "Heiti SC", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 4px 20px -2px rgba(194, 164, 106, 0.1);
+        }
+        .transition-soft {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-background">
+<!-- Top Navigation -->
+<nav class="w-full top-0 sticky z-50 bg-background dark:bg-on-background">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<span class="font-headline-md text-headline-md text-on-tertiary-container dark:text-tertiary-fixed-dim">Edith</span>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-text-body dark:text-outline-variant font-label-md text-label-md hover:text-on-tertiary-fixed-variant transition-colors duration-300" href="#">首页</a>
+<a class="text-on-tertiary-container dark:text-tertiary-fixed font-bold border-b-2 border-on-tertiary-container font-label-md text-label-md hover:text-on-tertiary-fixed-variant transition-colors duration-300" href="#">关于我</a>
+<a class="text-text-body dark:text-outline-variant font-label-md text-label-md hover:text-on-tertiary-fixed-variant transition-colors duration-300" href="#">职业特性</a>
+</div>
+<button class="cursor-pointer transition-opacity active:opacity-70 bg-on-tertiary-container text-background px-6 py-2 rounded-full font-label-md text-label-md">联系我</button>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+<!-- Hero Section -->
+<header class="mb-16 md:mb-24">
+<h1 class="font-display-lg text-display-lg text-text-primary mb-6 leading-tight">
+                一个人的 / 多面呈现
+            </h1>
+<p class="font-body-lg text-body-lg text-text-body max-w-2xl opacity-80">
+                穿梭于代码、节奏与生活细节之间。在职业的严谨之外，我也在这些琐碎而热烈的身份里寻找平衡与灵感。
+            </p>
+</header>
+<!-- Profile Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card 1: 猫奴 -->
+<div class="bg-surface p-8 md:p-12 border border-border-subtle rounded-xl flex flex-col gap-6 transition-soft hover:editorial-shadow group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container" data-icon="pets">pets</span>
+<span class="text-label-sm font-label-sm bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">身份 01</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-text-primary mb-4">猫奴</h3>
+<p class="font-body-md text-body-md text-text-body leading-relaxed">
+                        家中有三位“原住民”，它们不仅是生活的陪伴者，更是我观察世界的新视角。在忙碌的开发间隙，为它们准备餐食或只是静静地相处，是我最有效的解压方式。它们教会我如何在静止中获取力量。
+                    </p>
+</div>
+<div class="mt-auto pt-6 border-t border-border-subtle flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A close-up high-quality photograph of a serene domestic shorthair cat resting in a sunlit corner of a minimalist, warm-toned apartment. The lighting is soft and golden, highlighting the texture of its fur. The overall aesthetic is calm and elegant, following a sophisticated Morandi color palette with muted caramel and cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSoP__AGNYPHJzsfZhS9N9cBnZbYq3fYj2XMAhEemNAav8416dhMwjk_EDcc_VdlQCSGdxLI1osImTQz7qLAYFtd2eImoQ7Dzc1D1bOKzor1TFAFIzi-fdrgbGtgs3MsgaxdTulWUVozXahq1UDTrjzi6zJyBly1ouxsH4m2zZiSLkOXnbbE1dV7KUpclz7fIKnrXlvXkcPdggo-IRgKnpJuFhlyeOwWGcC9szWfAuQdd7ID_ctnvZ7T7rN-I7SNYAaHv-AOXeFTI"/>
+</div>
+<span class="text-label-md font-label-md text-text-body opacity-60">静谧时刻的共同守候者</span>
+</div>
+</div>
+<!-- Card 2: 大湾区居民 -->
+<div class="bg-surface p-8 md:p-12 border border-border-subtle rounded-xl flex flex-col gap-6 transition-soft hover:editorial-shadow group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container" data-icon="location_on">location_on</span>
+<span class="text-label-sm font-label-sm bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">身份 02</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-text-primary mb-4">大湾区居民</h3>
+<p class="font-body-md text-body-md text-text-body leading-relaxed">
+                        生活在这片充满活力的热土，见证了科技与文化的极速融合。从粤剧陈家祠到前海的智慧码头，大湾区的多元性拓宽了我的视野，也让我更深刻地理解什么是“效率与温情并存”的城市哲学。
+                    </p>
+</div>
+<div class="mt-auto">
+<div class="w-full h-40 rounded-lg overflow-hidden border border-border-subtle">
+<img class="w-full h-full object-cover" data-alt="An artistic architectural shot of a modern skyline in the Greater Bay Area at dusk. The sky is painted in soft Morandi colors of dusty blue and pale gold. The buildings are sleek and contemporary, reflecting the warm city lights. The scene captures a balance of urban technological progress and the serene atmosphere of a twilight evening." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD23egP9PWiWZkwWxiJjpZfVtGmlY2H-ImI7g6uy4lcAAhpPHgNT52jY19lwxxtxKCZq4LpTdjzoxFrObPB88J7bcKCsb8ef322XmIpAR_24qtbOxbPGDrSq517KjEAhTlFqSkFvLBziqieHxoQiZzK3zXFCa3jtPBkXcPhXqUDCZAjFpfYo5ME-tDJALBAs7BSBzrxIewOaFDyG_2yFdX7DOnc4L-OBvtgWwhnz9CSY-yozEiK4glFUTBqmFBB_Ueu85jeuekSM1I"/>
+</div>
+</div>
+</div>
+<!-- Card 3: Zumba 狂热份子 -->
+<div class="bg-surface p-8 md:p-12 border border-border-subtle rounded-xl flex flex-col gap-6 transition-soft hover:editorial-shadow group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container" data-icon="fitness_center">fitness_center</span>
+<span class="text-label-sm font-label-sm bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">身份 03</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-text-primary mb-4">Zumba 狂热份子</h3>
+<p class="font-body-md text-body-md text-text-body leading-relaxed">
+                        如果说编码是思维的体操，那么 Zumba 就是灵魂的释放。我享受在强劲的节奏中挥洒汗水，那种纯粹的动态快乐能瞬间重启我的创造力。在音乐中，没有逻辑框架，只有最直觉的表达。
+                    </p>
+</div>
+<div class="flex gap-2 flex-wrap">
+<span class="px-4 py-1.5 rounded-full border border-border-subtle text-label-md font-label-md text-on-tertiary-container">高能运动</span>
+<span class="px-4 py-1.5 rounded-full border border-border-subtle text-label-md font-label-md text-on-tertiary-container">节奏感</span>
+<span class="px-4 py-1.5 rounded-full border border-border-subtle text-label-md font-label-md text-on-tertiary-container">解压良方</span>
+</div>
+</div>
+<!-- Card 4: ESTJ (The Executive) - Highlighted -->
+<div class="bg-primary-container p-8 md:p-12 border-2 border-on-tertiary-container rounded-xl flex flex-col gap-6 transition-soft hover:shadow-xl relative overflow-hidden group">
+<!-- Visual highlight background element -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-on-tertiary-container/5 rounded-full blur-3xl group-hover:bg-on-tertiary-container/10 transition-colors"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container" data-icon="psychology">psychology</span>
+<span class="text-label-sm font-label-sm bg-on-tertiary-container text-white px-3 py-1 rounded-full">核心性格</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-baseline gap-3 mb-4">
+<h3 class="font-headline-lg text-headline-lg text-text-primary">ESTJ</h3>
+<span class="text-label-md font-label-md text-on-tertiary-container font-bold">总经理型</span>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+                        我天生倾向于建立秩序与组织。在项目中，我是那个确保“每块砖都放在正确位置”的人。对效率的追求、对细节的严谨掌控以及清晰的决策逻辑，是我在职场和生活中最稳固的基石。我信奉：卓越来源于日复一日的自律与执行。
+                    </p>
+</div>
+<div class="mt-auto relative z-10 grid grid-cols-2 gap-4">
+<div class="p-4 bg-background/50 rounded-lg border border-border-subtle">
+<p class="text-label-sm font-label-sm text-on-tertiary-container mb-1">执行力</p>
+<div class="h-1.5 w-full bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container rounded-full" style="width: 95%;"></div>
+</div>
+</div>
+<div class="p-4 bg-background/50 rounded-lg border border-border-subtle">
+<p class="text-label-sm font-label-sm text-on-tertiary-container mb-1">逻辑性</p>
+<div class="h-1.5 w-full bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Personal Philosophy Section -->
+<section class="mt-24 py-16 border-t border-border-subtle">
+<div class="max-w-3xl">
+<h2 class="font-headline-lg text-headline-lg text-text-primary mb-8">我的生活哲学</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-text-body leading-relaxed opacity-90">
+<p>我相信设计的价值不仅仅在于美学，更在于它如何通过克制与精确来引导更好的生活。正如我在代码中追求简洁（Clean Code），我也在生活中践行这种“精致的简约”。</p>
+<p>无论是作为猫奴的温柔，还是作为 ESTJ 的果敢，这些不同的侧面共同构成了现在的 Edith——一个在变动不居的世界中，始终保持理性底色并热烈拥抱生活的人。</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-border-subtle">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8">
+<div class="mb-6 md:mb-0">
+<span class="font-headline-md text-headline-md text-on-surface">Edith</span>
+<p class="font-label-sm text-label-sm text-text-body mt-2">© 2024 Edith. All rights reserved.</p>
+</div>
+<div class="flex gap-gutter items-center font-label-sm text-label-sm">
+<a class="text-text-body hover:text-on-tertiary-container dark:hover:text-tertiary-fixed-dim transition-colors" href="#">Email</a>
+<a class="text-text-body hover:text-on-tertiary-container dark:hover:text-tertiary-fixed-dim transition-colors" href="#">LinkedIn</a>
+<a class="text-text-body hover:text-on-tertiary-container dark:hover:text-tertiary-fixed-dim transition-colors" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+</body></html>
