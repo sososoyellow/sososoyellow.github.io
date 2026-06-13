@@ -32,7 +32,7 @@ const Header = () => {
                 end={to === "/"}
                 className={({ isActive }) =>
                   [
-                    "cursor-target font-body text-label-md transition-colors duration-300",
+                    "cursor-target font-body text-[28px] transition-colors duration-300",
                     isActive
                       ? "text-on-tertiary-container font-bold"
                       : "text-text-body hover:text-on-tertiary-fixed-variant",

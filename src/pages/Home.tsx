@@ -48,7 +48,7 @@ const Home = () => {
         <img
           src={PORTRAIT_URL}
           alt="Portrait of Edith"
-          className="w-[30%] aspect-square object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000"
+          className="w-[60%] aspect-square object-cover object-center transition-all duration-1000"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/20" />
       </div>

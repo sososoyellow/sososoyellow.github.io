@@ -1,9 +1,6 @@
 const GBA_IMG =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuD23egP9PWiWZkwWxiJjpZfVtGmlY2H-ImI7g6uy4lcAAhpPHgNT52jY19lwxxtxKCZq4LpTdjzoxFrObPB88J7bcKCsb8ef322XmIpAR_24qtbOxbPGDrSq517KjEAhTlFqSkFvLBziqieHxoQiZzK3zXFCa3jtPBkXcPhXqUDCZAjFpfYo5ME-tDJALBAs7BSBzrxIewOaFDyG_2yFdX7DOnc4L-OBvtgWwhnz9CSY-yozEiK4glFUTBqmFBB_Ueu85jeuekSM1I";
 
-const CAT_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCSoP__AGNYPHJzsfZhS9N9cBnZbYq3fYj2XMAhEemNAav8416dhMwjk_EDcc_VdlQCSGdxLI1osImTQz7qLAYFtd2eImoQ7Dzc1D1bOKzor1TFAFIzi-fdrgbGtgs3MsgaxdTulWUVozXahq1UDTrjzi6zJyBly1ouxsH4m2zZiSLkOXnbbE1dV7KUpclz7fIKnrXlvXkcPdggo-IRgKnpJuFhlyeOwWGcC9szWfAuQdd7ID_ctnvZ7T7rN-I7SNYAaHv-AOXeFTI";
-
 const About = () => {
   return (
     <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
@@ -32,14 +29,11 @@ const About = () => {
           <div>
             <h3 className="font-heading text-headline-lg text-text-primary mb-4">猫奴</h3>
             <p className="font-body text-body-md text-text-body leading-relaxed">
-              家中有三位"原住民"，它们不仅是生活的陪伴者，更是我观察世界的新视角。在忙碌的间隙，为它们准备餐食或只是静静地相处，是我最有效的解压方式。它们教会我如何在静止中获取力量。
+              家里有且仅有一个小警花Judy，香甜肥美肉多脾气好。
             </p>
-          </div>
-          <div className="mt-auto pt-6 border-t border-border-subtle flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
-              <img src={CAT_IMG} alt="Cat" className="w-full h-full object-cover" />
+            <div className="mt-4 rounded-xl overflow-hidden border border-border-subtle">
+              <img src="/judy.png" alt="小警花Judy" className="w-full h-auto object-cover" />
             </div>
-            <span className="font-body text-label-md text-text-body opacity-60">静谧时刻的共同守候者</span>
           </div>
         </div>
 

@@ -3,8 +3,8 @@ const WORKSPACE_IMG =
 
 const skillGroups = [
   {
-    category: "视觉与交互",
-    skills: ["UI/UX Design", "Design Systems", "Interaction Flow", "Prototyping", "Motion Design"],
+    category: "业务能力",
+    skills: ["项目管理", "HR业务流程重塑", "全球化交付", "数字化转型", "端到端构建"],
   },
   {
     category: "策略与洞察",
@@ -40,7 +40,7 @@ const Career = () => {
       <section className="mb-20">
         <h1 className="font-heading text-display-lg text-text-primary mb-4">职业特性</h1>
         <p className="font-body text-body-lg text-text-body max-w-2xl opacity-80">
-          在设计的广袤森林中，我致力于探索感性美学与商业逻辑的完美平衡。通过跨学科的视角，构建具有生命力的数字化体验。
+          海外HRIT/人力数字化转型专家｜四大咨询+头部甲方+头部ERP厂商经验｜全球多区域交付与大型IT项目管理
         </p>
       </section>
 
@@ -55,11 +55,11 @@ const Career = () => {
           <div className="flex flex-wrap gap-3">
             {skillGroups.map(({ category, skills }) => (
               <div key={category} className="w-full">
-                <div className="w-full mb-2 mt-4 font-body text-label-sm uppercase tracking-widest text-outline">
+                <div className="w-full mb-2 mt-4 font-body text-[36px] uppercase tracking-widest text-outline">
                   {category}
                 </div>
                 {skills.map((s) => (
-                  <span key={s} className="cursor-target skill-pill inline-block px-5 py-2.5 rounded-full font-body text-label-md text-on-tertiary-container mr-3 mb-3">
+                  <span key={s} className="cursor-target skill-pill inline-block px-5 py-2.5 rounded-full font-body text-[28px] text-on-tertiary-container mr-3 mb-3">
                     {s}
                   </span>
                 ))}
