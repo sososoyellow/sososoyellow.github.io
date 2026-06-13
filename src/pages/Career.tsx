@@ -7,8 +7,8 @@ const skillGroups = [
     skills: ["项目管理", "HR业务流程重塑", "全球化交付", "数字化转型", "端到端构建"],
   },
   {
-    category: "策略与洞察",
-    skills: ["User Research", "Brand Identity", "Content Strategy", "Product Thinking"],
+    category: "成长轨迹",
+    skills: ["985/211高校", "四大咨询背景", "国内顶尖erp公司", "多个五百强的工作经验"],
   },
 ];
 
@@ -39,7 +39,7 @@ const Career = () => {
       {/* Hero */}
       <section className="mb-20">
         <h1 className="font-heading text-display-lg text-text-primary mb-4">职业特性</h1>
-        <p className="font-body text-body-lg text-text-body max-w-2xl opacity-80">
+        <p className="font-body text-[27px] text-text-body max-w-2xl opacity-80">
           海外HRIT/人力数字化转型专家｜四大咨询+头部甲方+头部ERP厂商经验｜全球多区域交付与大型IT项目管理
         </p>
       </section>

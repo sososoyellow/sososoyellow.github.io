@@ -1,9 +1,8 @@
 import { useLocation } from "react-router-dom";
 
 const socialLinks = [
-  { href: "mailto:hello@edith.me", label: "Email",     icon: "mail"       },
-  { href: "https://linkedin.com",  label: "LinkedIn",  icon: "share"      },
-  { href: "https://instagram.com", label: "Instagram", icon: "camera_alt" },
+  { href: "mailto:su.yuanting@hotmail.com", label: "Email",    icon: "mail",  subtitle: "su.yuanting@hotmail.com" },
+  { href: "https://linkedin.com",           label: "LinkedIn", icon: "share", subtitle: "搜索edith su" },
 ];
 
 const Footer = () => {
@@ -18,16 +17,21 @@ const Footer = () => {
             © 2024 Edith. All rights reserved.
           </p>
           <div className="flex gap-gutter items-center">
-            {socialLinks.map(({ href, label, icon }) => (
+            {socialLinks.map(({ href, label, icon, subtitle }) => (
               <a
                 key={label}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="cursor-target font-body text-label-sm text-text-body hover:text-on-tertiary-container transition-colors flex items-center gap-1"
+                className="cursor-target font-body text-label-sm text-text-body hover:text-on-tertiary-container transition-colors flex flex-col items-center gap-0.5"
               >
-                <span className="material-symbols-outlined text-[16px]">{icon}</span>
-                {label}
+                <span className="flex items-center gap-1">
+                  <span className="material-symbols-outlined text-[16px]">{icon}</span>
+                  {label}
+                </span>
+                {subtitle && (
+                  <span className="text-[11px] opacity-60">{subtitle}</span>
+                )}
               </a>
             ))}
           </div>

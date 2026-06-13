@@ -22,13 +22,13 @@ const About = () => {
         <div className="cursor-target about-card md:p-12 group">
           <div className="flex justify-between items-start">
             <span className="material-symbols-outlined text-4xl text-on-tertiary-container">pets</span>
-            <span className="font-body text-label-sm bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">
-              身份 01
+            <span className="font-body text-[18px] bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">
+              认真铲屎官
             </span>
           </div>
           <div>
             <h3 className="font-heading text-headline-lg text-text-primary mb-4">猫奴</h3>
-            <p className="font-body text-body-md text-text-body leading-relaxed">
+            <p className="font-body text-[24px] text-text-body leading-relaxed">
               家里有且仅有一个小警花Judy，香甜肥美肉多脾气好。
             </p>
             <div className="mt-4 rounded-xl overflow-hidden border border-border-subtle">
@@ -41,14 +41,14 @@ const About = () => {
         <div className="cursor-target about-card md:p-12 group">
           <div className="flex justify-between items-start">
             <span className="material-symbols-outlined text-4xl text-on-tertiary-container">location_on</span>
-            <span className="font-body text-label-sm bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">
-              身份 02
+            <span className="font-body text-[18px] bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">
+              来了就是深圳人
             </span>
           </div>
           <div>
             <h3 className="font-heading text-headline-lg text-text-primary mb-4">大湾区居民</h3>
-            <p className="font-body text-body-md text-text-body leading-relaxed">
-              生活在这片充满活力的热土，见证了科技与文化的极速融合。从粤剧陈家祠到前海的智慧码头，大湾区的多元性拓宽了我的视野，也让我更深刻地理解什么是"效率与温情并存"的城市哲学。
+            <p className="font-body text-[24px] text-text-body leading-relaxed">
+              长期奔走在澳门，顺德，珠海，深圳，大湾区的大湾走地鸡。能快速适应各种环境，找到合适自己的成长方式与轨迹。
             </p>
           </div>
           <div className="mt-auto">
@@ -62,13 +62,13 @@ const About = () => {
         <div className="cursor-target about-card md:p-12 group">
           <div className="flex justify-between items-start">
             <span className="material-symbols-outlined text-4xl text-on-tertiary-container">fitness_center</span>
-            <span className="font-body text-label-sm bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">
-              身份 03
+            <span className="font-body text-[18px] bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full">
+              不跳舞不舒服
             </span>
           </div>
           <div>
             <h3 className="font-heading text-headline-lg text-text-primary mb-4">Zumba 狂热份子</h3>
-            <p className="font-body text-body-md text-text-body leading-relaxed">
+            <p className="font-body text-[24px] text-text-body leading-relaxed">
               如果说编码是思维的体操，那么 Zumba 就是灵魂的释放。我享受在强劲的节奏中挥洒汗水，那种纯粹的动态快乐能瞬间重启我的创造力。在音乐中，没有逻辑框架，只有最直觉的表达。
             </p>
           </div>
@@ -91,8 +91,8 @@ const About = () => {
 
           <div className="flex justify-between items-start relative z-10">
             <span className="material-symbols-outlined text-4xl text-on-tertiary-container">psychology</span>
-            <span className="font-body text-label-sm bg-on-tertiary-container text-white px-3 py-1 rounded-full">
-              核心性格
+            <span className="font-body text-[18px] bg-on-tertiary-container text-white px-3 py-1 rounded-full">
+              MBTI
             </span>
           </div>
 
@@ -101,7 +101,7 @@ const About = () => {
               <h3 className="font-heading text-headline-lg text-text-primary">ESTJ</h3>
               <span className="font-body text-label-md text-on-tertiary-container font-bold">总经理型</span>
             </div>
-            <p className="font-body text-body-md text-on-primary-container leading-relaxed">
+            <p className="font-body text-[24px] text-on-primary-container leading-relaxed">
               我天生倾向于建立秩序与组织。在项目中，我是那个确保"每块砖都放在正确位置"的人。对效率的追求、对细节的严谨掌控以及清晰的决策逻辑，是我在职场和生活中最稳固的基石。我信奉：卓越来源于日复一日的自律与执行。
             </p>
           </div>

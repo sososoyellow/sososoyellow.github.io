@@ -1,0 +1,132 @@
+/* ── Morandi Caramel palette for particles ── */
+:root {
+  --color-1: #8b5a2b;
+  --color-2: #c4a882;
+  --color-3: #695d3e;
+  --color-4: #2F1B0C;
+}
+
+/* ── Container ── */
+.gooey-nav-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Nav list ── */
+.gooey-nav-container nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.gooey-nav-container nav ul li a {
+  display: block;
+  padding: 10px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #4A4A4A;
+  font-size: 42px;
+  font-family: 'XiangQiao', 'BlueCustard', 'Work Sans', sans-serif;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.3s;
+}
+
+/* Hide active item's text — .effect.text renders it in white on top */
+.gooey-nav-container nav ul li.active a {
+  color: transparent;
+}
+
+/* ── Shared transition for both effect spans ── */
+.gooey-nav-container .effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  pointer-events: none;
+  transition:
+    left   0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    top    0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    width  0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Gooey blob background pill ── */
+.gooey-nav-container .effect.filter {
+  filter: url(#gooey-nav-filter);
+  background: #2F1B0C;
+  z-index: 0;
+  overflow: visible;
+}
+
+/* ── White text overlay on active item ── */
+.gooey-nav-container .effect.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FDFAF4;
+  font-size: 42px;
+  font-family: 'XiangQiao', 'BlueCustard', 'Work Sans', sans-serif;
+  z-index: 2;
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    left    0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    top     0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    width   0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    height  0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gooey-nav-container .effect.text.active {
+  opacity: 1;
+}
+
+/* ── Particles ── */
+.particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.point {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.effect.filter.active .particle {
+  animation: gooey-particle-move var(--time) ease-out forwards;
+}
+
+@keyframes gooey-particle-move {
+  0% {
+    opacity: 1;
+    transform: translate(
+      calc(-50% + var(--start-x)),
+      calc(-50% + var(--start-y))
+    ) scale(var(--scale)) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--end-x)),
+      calc(-50% + var(--end-y))
+    ) scale(0.1) rotate(var(--rotate));
+  }
+}

@@ -1,5 +1,5 @@
-import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import GooeyNav from "../gooey_nav";
 
 const navItems = [
   { to: "/",       label: "首页"    },
@@ -10,6 +10,16 @@ const navItems = [
 const Header = () => {
   const { pathname } = useLocation();
   const isCareer = pathname === "/career";
+
+  const activeIndex = (() => {
+    if (pathname === "/") return 0;
+    const idx = navItems.findIndex(
+      (item) => item.to !== "/" && pathname.startsWith(item.to)
+    );
+    return idx >= 0 ? idx : 0;
+  })();
+
+  const gooeyItems = navItems.map(({ to, label }) => ({ label, href: to }));
 
   return (
     <header className={`w-full top-0 sticky z-50 ${isCareer ? "glass-nav" : "bg-background"}`}>
@@ -23,42 +33,20 @@ const Header = () => {
           Edith
         </NavLink>
 
-        {/* Nav links */}
-        <nav className="hidden md:flex gap-gutter items-center">
-          {navItems.map(({ to, label }, index) => (
-            <React.Fragment key={to}>
-              <NavLink
-                to={to}
-                end={to === "/"}
-                className={({ isActive }) =>
-                  [
-                    "cursor-target font-body text-[28px] transition-colors duration-300",
-                    isActive
-                      ? "text-on-tertiary-container font-bold"
-                      : "text-text-body hover:text-on-tertiary-fixed-variant",
-                  ].join(" ")
-                }
-              >
-                {label}
-              </NavLink>
-              {index === 0 && (
-                <span className="font-body text-label-md select-none pointer-events-none">
-                  &nbsp;&nbsp;
-                </span>
-              )}
-              {index === 1 && (
-                <span className="font-body text-label-md select-none pointer-events-none">
-                  &nbsp;&nbsp;
-                </span>
-              )}
-            </React.Fragment>
-          ))}
-        </nav>
+        {/* Nav — GooeyNav (desktop only) */}
+        <div className="hidden md:flex">
+          <GooeyNav
+            items={gooeyItems}
+            initialActiveIndex={activeIndex}
+            animationTime={500}
+            particleCount={12}
+          />
+        </div>
 
         {/* CTA button */}
         <a
-          href="mailto:hello@edith.me"
-          className="cursor-target bg-on-tertiary-container text-white px-6 py-2 rounded-full font-body text-label-md hover:opacity-90 transition-all"
+          href="mailto:su.yuanting@hotmail.com"
+          className="cursor-target bg-on-tertiary-container text-white px-6 py-2 rounded-full font-body text-[21px] hover:opacity-90 transition-all"
         >
           联系我
         </a>
